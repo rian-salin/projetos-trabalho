@@ -81,7 +81,7 @@ ul{
 }
 
 ul li.item-menu{
-    transition: .3s;
+    transition: .5s;
 }
 
 ul li.item-menu:hover{
@@ -92,9 +92,10 @@ ul li.item-menu a{
     color: black;
     text-decoration: none;
     font-size: 20px;
-    padding: 20px 4%;
+    padding: 15px 4%;
     display: flex;
     line-height: 40px;
+   
 }
 
 .txt-link{
@@ -113,17 +114,18 @@ ul li.item-menu a .icon > i{
 
 nav.menu-lateral .submenu{
     background-color: rgb(122, 122, 122);
-    padding: 6px 6px 14px 50px;
+    padding: 10%;
     display: none; 
 }
 
 .item-menu:hover .submenu {
     display: block;
-    transition: 1s;
 }
 
 .menu-lateral .item-menu .submenu a {
     color: white;
 }
 
-
+.menu-lateral .item-menu .submenu a:hover{
+    text-decoration:underline
+}
