@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto-Neo</title>
-    <link rel="stylesheet" href="/projeto-neo/styles/home.css">
+    <link rel="stylesheet" href="/projeto-neo/styles/home.css" id="global-style">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
                 <span class="txt-link">API</span>
                 </a>
                 <ul class="submenu">
-                    <li><a href="#">Cadastro</a></li>
+                    <li><a href="/projeto-neo/pages/cadastroAPI.html" onclick="navigateTo('/cadastroAPI'); return false;">Cadastro</a></li>
                     <li><a href="#">Homologação Produção</a></li>
                     
                 </ul>
@@ -42,7 +42,7 @@
                 <span class="txt-link">Cadastro</span>
                 </a>
                 <ul class="submenu">
-                    <li><a href="/projeto-neo/pages/cadastro-Perfil.html">Perfil</a></li>
+                    <li><a href="/projeto-neo/pages/cadastro-Perfil.html" onclick="navigateTo('/cadastro-Perfil'); return false;">Perfil</a></li>
                     <li><a href="#">Usuários</a></li>
                 </ul>
 
@@ -106,7 +106,11 @@
 
     </nav>
 
-    <h1>ola</h1>
+    <main id="content">
+        
+    </main>
+
+    <script src="/app.js"></script>
 
 </body>
 </html>
