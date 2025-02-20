@@ -1,12 +1,14 @@
 const routes = {
     "/": "projeto-neo/pages/index.html", 
     "/cadastro-Perfil": "projeto-neo/pages/cadastro-Perfil.html",
-    "/cadastroAPI": "projeto-neo/pages/cadastroAPI.html"
+    "/cadastroAPI": "projeto-neo/pages/cadastroAPI.html",
+    "/homol-Produc": "projeto-neo/pages/homol-Produc.html"
 };
 
 const stylesheets = {
     "/cadastro-Perfil": "projeto-neo/styles/cadastro-Perfil.css",
-    "/cadastroAPI": "projeto-neo/styles/cadastroAPI.css"
+    "/cadastroAPI": "projeto-neo/styles/cadastroAPI.css",
+    "/homol-Produc": "projeto-neo/styles/homol-produc.css"
 };
 
 
@@ -26,12 +28,14 @@ function loadContent(route) {
             contentDiv.innerHTML = html;
 
             // Remover classes antigas e adicionar a classe da página atual
-            contentDiv.classList.remove("perfil-page", "cadastroapi-page");
+            contentDiv.classList.remove("perfil-page", "cadastroapi-page", "homol-produc-page");
 
             if (route === "/cadastro-Perfil") {
                 contentDiv.classList.add("perfil-page");
             } else if (route === "/cadastroAPI") {
                 contentDiv.classList.add("cadastroapi-page");
+            } else if (route === "/homol-Produc") {
+                contentDiv.classList.add("homol-produc-page");
             }
 
             // Carregar o CSS específico da página
@@ -68,3 +72,4 @@ window.onpopstate = () => loadContent(location.pathname);
 
 // Carregar a página inicial ao abrir o site
 loadContent(location.pathname);
+

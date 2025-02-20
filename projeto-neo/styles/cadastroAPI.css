@@ -1,4 +1,20 @@
-h1{
-    margin-left: 450px;
-    color: darkcyan;
+section{
+    background-color: #FFFFFF;
+    width: 700px;
+    height: 780px;
+    margin-top:40px;
+    display: flex;
+    margin-left: 100px;
+    padding: 1%;
+    border-radius: 26px;
 }
+
+main{
+    display: flex;
+    margin-left: 80px;
+}
+
+h3{
+    text-decoration: underline;
+}
+
