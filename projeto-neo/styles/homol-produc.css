@@ -1,4 +1,54 @@
-h1{
-    color: purple;
-    margin-left: 450px;
+main{
+    display: flex;
+    gap: 100px;
+    margin-left: 130px;
 }
+
+section{
+    width: 700px;
+    height: 780px;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 26px;
+    padding: 1%;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.form-homologacao{
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    margin-left: 13%;
+}
+
+.form-homologacao input {
+    width: 120px;
+}
+
+.form-producao{
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    margin-left: 13%;
+}
+
+.local-botao{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 635px;
+}
+
+.botao-enviar{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    padding: 5px 50px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
