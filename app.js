@@ -12,14 +12,14 @@ const stylesheets = {
 };
 
 
-const globalStylesheet = "projeto-neo/styles/home.css";
+const globalStylesheet = "projeto-neo/styles/home.css"; //define css global
 
-function navigateTo(route) {
-    history.pushState({}, "", route);
-    loadContent(route);
+function carregar(route) {
+    history.pushState({}, "", route); // Atualiza a URL sem recarregar a página
+    carregaConteudo(route); // Carrega o conteúdo correspondente
 }
 
-function loadContent(route) {
+function carregaConteudo(route) {
     const contentDiv = document.getElementById("content");
 
     fetch(routes[route] || routes["/"])
@@ -27,7 +27,7 @@ function loadContent(route) {
         .then(html => {
             contentDiv.innerHTML = html;
 
-            // Remover classes antigas e adicionar a classe da página atual
+            
             contentDiv.classList.remove("perfil-page", "cadastroapi-page", "homol-produc-page");
 
             if (route === "/cadastro-Perfil") {
@@ -45,7 +45,7 @@ function loadContent(route) {
 }
 
 function loadStylesheet(cssFile) {
-    // Remover o CSS específico da página anterior, mas manter o global
+    // Remover o CSS específico da página anterior, Adiciona o CSS da nova página se existir.
     const oldLink = document.getElementById("page-style");
     if (oldLink) oldLink.remove();
 
@@ -58,7 +58,7 @@ function loadStylesheet(cssFile) {
     }
 }
 
-// Adicionar o CSS global (home.css) ao carregar a página
+// Garante que o CSS global (home.css) sempre esteja carregado.
 (function addGlobalStylesheet() {
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -67,9 +67,9 @@ function loadStylesheet(cssFile) {
     document.head.appendChild(link);
 })();
 
-// Manter o estilo ao navegar pelo histórico
-window.onpopstate = () => loadContent(location.pathname);
+//Permite que o usuário use os botões "Voltar" e "Avançar" do navegador.
+window.onpopstate = () => carregaConteudo(location.pathname); 
 
 // Carregar a página inicial ao abrir o site
-loadContent(location.pathname);
+carregaConteudo(location.pathname);
 
